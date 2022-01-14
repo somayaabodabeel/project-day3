@@ -1,2 +1,2 @@
 web: sh setup.sh && streamlit run app.py
-web:gunicorn app:app
+web: streamlit run --server.port $PORT app.py
