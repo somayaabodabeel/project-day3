@@ -8,4 +8,5 @@ echo "\
 headless = true\n\
 enableCORS=false\n\
 port = $PORT\n\
+var port = process.evn.PORT || 8000;
 " > ~/.streamlit/config.toml
