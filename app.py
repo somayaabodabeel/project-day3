@@ -13,11 +13,8 @@ if "DYNO" in os.environ and os.path.isdir(".dvc"):
     os.system("rm -r .dvc .apt/usr/lib/dvc")
 def main():
     html_temp = """
-    <style>
-div {
-  background-image: url('Forcasting the future cost.jpg');
-}
-</style>
+    <div style="background-color:lightblue;padding:16px">
+    <h2 style="color:black";text-align:center> Health Insurance Cost Prediction Using ML</h2>
     </div>
     
     """
