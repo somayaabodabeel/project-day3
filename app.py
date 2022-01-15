@@ -13,8 +13,11 @@ if "DYNO" in os.environ and os.path.isdir(".dvc"):
     os.system("rm -r .dvc .apt/usr/lib/dvc")
 def main():
     html_temp = """
-    <div style="background-color:lightblue;padding:16px">
-    <h2 style="color:black";text-align:center> Health Insurance Cost Prediction Using ML</h2>
+    <style>
+div {
+  background-image: url('Forcasting the future cost.jpg');
+}
+</style>
     </div>
     
     """
@@ -36,7 +39,7 @@ def main():
     
     
     
-    p4 = st.slider("Enter Number of Children",0,4)
+    p4 = st.slider("Enter Number of Children",0,15)
     
     
     s2 = st.selectbox("Smoker",("Yes","No"))
@@ -48,7 +51,7 @@ def main():
         p5=0
         
         
-    p6 = st.slider("Enter Your Region",1,4)
+    p6 = st.slider("Enter Your Region",("southwest", "southeast", "northwest", "northeast")
     
     if st.button('Predict'):
         pred= model.predict([[p1,p2,p3,p4,p5,p6]])
