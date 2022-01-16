@@ -48,17 +48,12 @@ def main():
         p5=0
         
         
-    s3 = st.selectbox('Enter Your Region',('southwest', 'southeast', 'northwest', 'northeast'))
-     if s3=='southwest':
-        p6=1
-    else:
-        p6=0
-    
+    p6 = st.selectbox('Enter Your Region',('southwest', 'southeast', 'northwest', 'northeast'))
     if st.button('Predict'):
         pred= model.predict([[p1,p2,p3,p4,p5,p6]])
         
         st.balloons()
-        st.success('Your Insurance Cost is {}'.format(round(pred[0],4)))
+        st.success('Your Insurance Cost is {}'.format(round(pred[0],2)))
         
     
     
