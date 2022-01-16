@@ -61,7 +61,7 @@ def main():
         pred= model.predict([[p1,p2,p3,p4,p5,p6]])
         
         st.balloons()
-        st.success('Your Insurance Cost is {}'.format(round(pred[0],2)))
+        st.success('Your Insurance Cost is {}'.format(round(pred[0],4)))
         
     
     
