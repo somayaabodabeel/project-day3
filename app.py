@@ -48,7 +48,15 @@ def main():
         p5=0
         
         
-    p6 = st.selectbox('Enter Your Region',('southwest', 'southeast', 'northwest', 'northeast'))
+    s3 = st.selectbox('Enter Your Region',('southwest', 'southeast', 'northwest', 'northeast'))
+    if s1=='southwest':
+        p6=1
+    else:
+        p6=2
+     else:
+        p6=3
+     else:
+        p6=4
     if st.button('Predict'):
         pred= model.predict([[p1,p2,p3,p4,p5,p6]])
         
